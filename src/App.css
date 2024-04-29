@@ -1,17 +1,18 @@
 .grid {
-    display: flex;
-    width: 50%;
-    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(var(--cols, 10), 35px);
+    grid-template-rows: repeat(var(--rows, 10), 35px);
     gap: 2px;
-    flex-wrap: wrap;
+    user-select: none;
 
 
     .box{
-        width: 50px;
-        border: 2px solid gray;
-        text-align: center;
-        padding: 5px;
-        user-select: none;
+        width: 35px;
+        height: 35px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &.selected{
             background-color: lightskyblue;
         }

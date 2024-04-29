@@ -5,7 +5,7 @@ function App() {
 
   return (
 
-     <SelectableGrid rows={10} cols={10}/>
+     <SelectableGrid rows={10} cols={13}/>
   )
 }
 

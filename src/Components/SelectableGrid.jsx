@@ -25,8 +25,7 @@ const SelectableGrid = ({ rows = 10, cols = 10 }) => {
       }
     }
     setSelectedBox(selectedBoxArray);
-  })
- 
+  });
 
   const onMouseDown = (boxNumber) => {
     setSelectedBox([boxNumber]);
@@ -40,16 +39,20 @@ const SelectableGrid = ({ rows = 10, cols = 10 }) => {
 
   const boxes = [...Array(rows * cols).keys()];
   return (
-    <div className="grid" onMouseUp={onMouseUp}>
+    <div
+      className="grid"
+      style={{ "--rows": rows, "--cols": cols }}
+      onMouseUp={onMouseUp}
+    >
       {boxes.map((b) => (
         <div
-          className={`box ${selectedBox.includes(b+1)?'selected':''}`}
+          className={`box ${selectedBox.includes(b + 1) ? "selected" : ""}`}
           key={b}
           onMouseDown={() => {
             onMouseDown(b + 1);
           }}
           onMouseEnter={() => {
-           if(isMouseDown) onMouseEnter(b + 1);
+            if (isMouseDown) onMouseEnter(b + 1);
           }}
         >
           {b + 1}
