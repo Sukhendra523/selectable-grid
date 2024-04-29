@@ -1,13 +1,11 @@
-import { useState } from 'react'
 import './App.css'
+import SelectableGrid from './Components/SelectableGrid'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-     
-    </>
+
+     <SelectableGrid rows={10} cols={10}/>
   )
 }
 
