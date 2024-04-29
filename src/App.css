@@ -4,6 +4,7 @@
     grid-template-rows: repeat(var(--rows, 10), 35px);
     gap: 2px;
     user-select: none;
+    justify-content: center;
 
 
     .box{
